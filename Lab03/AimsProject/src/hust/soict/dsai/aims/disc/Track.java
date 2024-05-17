@@ -1,8 +1,13 @@
 package hust.soict.dsai.aims.disc;
 
-public class Track {
+public class Track implements Playable{
 	private String title;
 	private int length;
+	
+	public void play() {
+		System.out.println("Playing DVD: " + this.getTitle());
+		System.out.println("DVD length: " + this.getLength());
+		}
 	
 	public Track() {
 		// TODO Auto-generated constructor stub

@@ -2,10 +2,18 @@ package hust.soict.dsai.aims.disc;
 
 import java.util.ArrayList;
 
-public class CompactDisc extends Disc{
+public class CompactDisc extends Disc implements Playable{
 	private String artist;
     private ArrayList<Track> tracks = new ArrayList<Track>();
     
+	public void play() {
+        System.out.println("Playing CD: "+this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
+		for (Track i : tracks) {
+            i.play();
+        }
+		return;
+	}
     
 	public CompactDisc(String title) {
 		super(title);
