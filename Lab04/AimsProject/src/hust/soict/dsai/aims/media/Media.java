@@ -7,6 +7,20 @@ public abstract class Media {
     private float cost;
     private static int nbMedia = 0;
     
+    public boolean equals(Object o) {
+        if (o instanceof Media) {
+            if (this.title == ((Media)o).title) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+    
     public Media(String title, String category, float cost) {
         nbMedia++;
         this.id = nbMedia;
