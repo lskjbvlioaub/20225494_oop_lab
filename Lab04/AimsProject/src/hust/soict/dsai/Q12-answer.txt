@@ -1,0 +1,16 @@
+What class should implement the Comparable interface?
+The Media class.
+
+In those classes, how should you implement the compareTo() method be to reflect the
+ordering that we want?
+We compare the two attributes of the object title and cost in their respective order.
+
+Can we have two ordering rules of the item (by title then cost and by cost then title) 
+if we use this Comparable interface approach?
+We can not because the compareTo method can only implement a single ordering rule at
+a time.
+
+Suppose the DVDs has a different ordering rule from the other media types, that is by 
+title, then decreasing length, then cost. How would you modify your code to allow this?
+We will use method overriding to override the compareTo method in the DigitalVideoDisc 
+class, then we modify the compareTo method according to our order.
